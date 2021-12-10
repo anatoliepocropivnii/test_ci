@@ -9,4 +9,6 @@ cd "${CODE_PATH}"
 
 "$2"
 
+set
+
 idf.py build
