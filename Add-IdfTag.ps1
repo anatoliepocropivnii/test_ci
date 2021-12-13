@@ -10,7 +10,7 @@ $IdfBranch = "branch-${IdfTag}"
 
 git checkout master
 git checkout -b "${IdfBranch}"
-
+sed -i "1s!.*!FROM espressif/idf:${IdfTag}!" Dockerfile
 git add Dockerfile
 git commit -m "tools: add GitHub action for ESP-IDF ${IdfBranch}"
 git tag "${IdfTag}"
