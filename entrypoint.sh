@@ -9,11 +9,11 @@ printenv
 
 CODE_PATH="$1"
 
-. $IDF_PATH/export.sh
+#. $IDF_PATH/export.sh
 
-cd "${CODE_PATH}"
+#cd "${CODE_PATH}"
 
-idf.py build
+#idf.py build
 
 
 #!/usr/bin/env bash
