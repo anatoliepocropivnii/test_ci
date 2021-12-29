@@ -10,6 +10,6 @@ ENV IDF_TOOLS_PATH=/opt/esp
 |4 DEBIAN_FRONTEND=noninteractive IDF_CHECKOUT_REF=5624dffc52271389376352974ba5911963ee207b IDF_CLONE_BRANCH_OR_TAG=master IDF_CLONE_URL=https://github.com/espressif/esp-idf.git /bin/sh -c echo IDF_CHECKOUT_REF=$IDF_CHECKOUT_REF IDF_CLONE_BRANCH_OR_TAG=$IDF_CLONE_BRANCH_OR_TAG &&     git clone --recursive       ${IDF_CLONE_BRANCH_OR_TAG:+-b $IDF_CLONE_BRANCH_OR_TAG}       $IDF_CLONE_URL $IDF_PATH &&     if [ -n "$IDF_CHECKOUT_REF" ]; then       cd $IDF_PATH &&       git checkout $IDF_CHECKOUT_REF &&       git submodule update --init --recursive;     fi
 |4 DEBIAN_FRONTEND=noninteractive IDF_CHECKOUT_REF=5624dffc52271389376352974ba5911963ee207b IDF_CLONE_BRANCH_OR_TAG=master IDF_CLONE_URL=https://github.com/espressif/esp-idf.git /bin/sh -c :   && update-ca-certificates --fresh   && $IDF_PATH/tools/idf_tools.py --non-interactive install required   && $IDF_PATH/tools/idf_tools.py --non-interactive install cmake   && $IDF_PATH/tools/idf_tools.py --non-interactive install-python-env   && rm -rf $IDF_TOOLS_PATH/dist   && :
 ENV IDF_CCACHE_ENABLE=1
-COPY file:299ff3432447bafac29ebd8c1490bfc9953c6e4bdba18dfe85858f964ca6875b in /opt/esp/entrypoint.sh
+COPY entrypoint.sh  in /opt/esp/entrypoint.sh
 ENTRYPOINT ["/opt/esp/entrypoint.sh"] 
 CMD ["/bin/bash"]
