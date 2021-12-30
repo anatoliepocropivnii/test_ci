@@ -6,7 +6,7 @@ branding:
 inputs:
   path:
     description: 'Relative path under $GITHUB_WORKSPACE to place the repository'
-    default: '/dicm/esp32/'
+    default: 'dicm/esp32/'
 runs:
   using: 'docker'
   image: 'Dockerfile'
