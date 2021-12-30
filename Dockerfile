@@ -43,7 +43,7 @@ RUN : \
 #   IDF_CLONE_BRANCH_OR_TAG=release/vX.Y
 #   IDF_CHECKOUT_REF=<some commit on release/vX.Y branch>.
 
-ARG IDF_CLONE_URL=https://github.com/espressif/esp-idf.git
+ARG IDF_CLONE_URL=https://github.com/onedometic/esp-idf.git
 ARG IDF_CLONE_BRANCH_OR_TAG=master
 ARG IDF_CHECKOUT_REF=
 
@@ -71,9 +71,7 @@ RUN : \
 
 # Ccache is installed, enable it by default
 ENV IDF_CCACHE_ENABLE=1
-COPY entrypoint.sh /opt/esp/entrypoint.sh
 
-ENTRYPOINT [ "/opt/esp/entrypoint.sh" ]
 CMD [ "/bin/bash" ]
 
 ADD entrypoint.sh /entrypoint.sh
