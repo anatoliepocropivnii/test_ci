@@ -44,7 +44,7 @@ RUN : \
 #   IDF_CHECKOUT_REF=<some commit on release/vX.Y branch>.
 
 ARG IDF_CLONE_URL=https://github.com/onedometic/esp-idf.git
-ARG IDF_CLONE_BRANCH_OR_TAG=master
+ARG IDF_CLONE_BRANCH_OR_TAG=dometic-mod-branch-v4.2.2
 ARG IDF_CHECKOUT_REF=
 
 ENV IDF_PATH=/opt/esp/idf
