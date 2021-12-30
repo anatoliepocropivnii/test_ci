@@ -76,4 +76,4 @@ CMD [ "/bin/bash" ]
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT [ "/entrypoint.sh /dicm/esp32" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
