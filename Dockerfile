@@ -1,3 +1,4 @@
+FROM scratch
 ADD file:5d68d27cc15a80653c93d3a0b262a28112d47a46326ff5fc2dfbf7fa3b9a0ce8 in / 
 CMD ["bash"]
 ARG DEBIAN_FRONTEND=noninteractive 
