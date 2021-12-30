@@ -9,11 +9,5 @@ CODE_PATH="$1"
 cd "${CODE_PATH}"
 
 idf.py --version
-idf.py --version
-idf.py --version
-idf.py --version
-idf.py --version
-idf.py --version
-idf.py --version
 
 idf.py build
